@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+
+  <!-- Meta Tags exist here. These meta tags here set the site title, site name, site desciption, content type and inital device scale.-->
+
+  <meta property="og:title" content="MineSweeper"/>
+  <meta property="og:site_name" content="MineSweeper"/>
+  <meta property="og:description" content="The Ultimate MineSweeper Game"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+
+
+
+<!--  This sets the title of my bio page to MineSweeper and appears in the tab view when the page is loaded.-->
+
+
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="materialize/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+
+
+
+<!-- This is the navbar located at the top of the page, the navbar icons are used from material-icons which is a font type icon set that allows you to define icons and use them in your code. For instance -->
+
+  <nav>
+   <div class="nav-wrapper #00acc1 cyan darken-1
+
+
+">
+     <a href="#!" class="brand-logo"><i class="material-icons"></i></a>
+     <ul class="center hide-on-med-and-down">
+
+
+
+       <a href="#Home" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">loop</i></a>
+        <a href="index.html" class="btn-floating btn-large waves-effect waves-light #536dfe indigo accent-2"><i class="material-icons"><i class="material-icons">play_circle_outline</i></i></a>
+        <a href="Play.html" class="btn-floating btn-large waves-effect waves-light #00b0ff light-blue accent-3"><i class="material-icons">info</i></a>
+
+     </ul>
+   </div>
+ </nav>
+</a>
+
+
+
+  <!--  This sets the background color, sets the defualt font and font family to San Francisco, sets the color of the text,
+aligns the text to the center of the screen and  smooths the font.  This also sets the background image to the size of 3264px by 2176px and does not repeat the image.-->
+
+<!-- We also define some classes here, for instance we have several types of boxes with different attibutes, sizes  and colors. We define them here so we can use class="" in the code.-->
+
+
+<style>
+ html {
+  margin: 0;
+  padding: 0;
+  background-color: #677787;
+  background-image: url("images/blue.jpg");
+  background-repeat:no-repeat;
+  background-size: 1920px 1080px;
+
+  font-family: -apple-system, "San Francisco", sans-serif;
+  color: #fff;
+
+  text-align: center;
+
+  -webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+}
+
+
+.div1 {
+    width: 500px;
+    height: 300px;
+    border: 1px solid white;
+    box-sizing: border-box;
+}
+
+
+.centerbox {
+background: #677787;
+   height: 800px;
+   width: 600px
+    text-align: center;
+    border: 3px solid white;
+}
+
+
+
+
+ .scoreboard {
+ background: #677787;
+ margin-right: 0px;
+    height: 50px;
+    width: 50px
+     text-align: right;
+
+ }
+
+
+ .smallsquare2 {
+   border: 5px solid white;
+   position: relative;
+   text-align: center;
+   width: 50px;
+   height: 50px;
+ }
+
+
+ .container {
+     width:750px;
+     height:750px;
+ }
+ .smallsquare, .largesquare {
+     width:50px;
+     float:left;
+     height:50px;
+ //-moz-box-sizing:border-box;
+     border:1px solid white;
+
+ }
+
+ .largesquare {
+     width:752px;
+     //float:left;
+     height:752px;
+     background-color: #FC5457;
+ }
+
+
+
+</style>
+</head>
+<body>
+
+
+<!-- Set the game name in center of page here -->
+
+   <center> <h1  id="game-title"> Game Title <h1> <center>
+
+
+<!-- Square Container containg smaller squares  -->
+
+
+
+ <div class="container">
+    <div class="largesquare">
+
+
+
+<div class="smallsquare" onclick="Materialize.toast('I am a square', 1000)"> </div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+<div class="smallsquare"></div>
+
+
+
+<!-- <img width="600" height="600" src="grid.png"> -->
+
+
+
+        </div>
+      </div>
+
+<!-- Home Anchor -->
+      <a name="home"></a>
+      <img height="50">
+
+
+
+        <!-- Here are where javascript scripts are defined -->
+
+        <!--  Start of script section -->
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="materialize/js/materialize.js"></script>
+        <script src="materialize/js/init.js"></script>
+
+
+
+
+
+        <script // Materialize.toast(message, displayLength, className, completeCallback);
+          Materialize.toast('I am a toast!', 4000) // 4000 is the duration of the toast?></script>
+
+          <script // Initialize collapse button
+           $(".button-collapse").sideNav();
+           // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+           //$('.collapsible').collapsible();></script>
+
+
+
+
+<!-- Game Name Script -->
+
+  <script> let name = "Ultimate MineSweeper";
+  document.querySelector("#game-title").innerHTML = name;
+  </script>
+
+
+
+        <!-- End of script section  -->
+
+
+
+  </div>
+
+  <footer class="page-footer">
+
+<!-- Footer Content -->
+
+
+  </footer>
+
+
+</body>
+</html>

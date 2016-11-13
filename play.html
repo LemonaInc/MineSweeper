@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+  <!-- Meta Tags exist here. These meta tags here set the site title, site name, site desciption, content type and inital device scale.-->
+
+  <meta property="og:title" content="MineSweeper"/>
+  <meta property="og:site_name" content="MineSweeper"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+
+
+
+<!--  This sets the title of my bio page to MineSweeper and appears in the tab view when the page is loaded.-->
+
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="materialize/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+
+
+
+<!-- This is the navbar located at the top of the page, the navbar icons are used from material-icons which is a font type icon set that allows you to define icons and use them in your code. For instance -->
+
+  <nav>
+   <div class="nav-wrapper #00acc1 cyan darken-1
+
+
+">
+     <a href="#!" class="brand-logo"><i class="material-icons"></i></a>
+     <ul class="center hide-on-med-and-down">
+
+       <li><a href="#box2"><i></i></a></li>
+
+
+        <a href="index.html" class="btn-floating btn-large waves-effect waves-light #536dfe indigo accent-2"><i class="material-icons">play_circle_outline</i></a>
+        <a href="#Info" class="btn-floating btn-large waves-effect waves-light #00b0ff light-blue accent-3"><i class="material-icons">info</i></a>
+
+     </ul>
+   </div>
+ </nav>
+</a>
+
+
+
+<!-- Favicon code here-->
+
+
+  <!--  This sets the background color, sets the defualt font and font family to San Francisco, sets the color of the text,
+aligns the text to the center of the screen and  smooths the font.  This also sets the background image to the size of 3264px by 2176px and does not repeat the image.-->
+
+<!-- We also define some classes here, for instance we have several types of boxes with different attibutes, sizes  and colors. We define them here so we can use class="" in the code.-->
+
+
+<style>
+ html {
+  margin: 0;
+  padding: 0;
+  background-color: #677787;
+  background-image: url("images/blueblur.jpg");
+  background-repeat:no-repeat;
+  background-size: 1920px 1080px;
+
+  font-family: -apple-system, "San Francisco", sans-serif;
+  color: #fff;
+
+  text-align: center;
+
+  -webkit-font-smoothing: antialiased;
+text-rendering: optimizeLegibility;
+-moz-osx-font-smoothing: grayscale;
+}
+
+
+.div1 {
+    width: 500px;
+    height: 300px;
+    border: 1px solid white;
+    box-sizing: border-box;
+}
+
+
+
+</style>
+</head>
+<body>
+
+
+
+<!-- Set name in center of page here-->
+
+   <center> <h1  id="game-title"> Game Title <h1> <center>
+
+
+
+    <!-- Here is another container that organizes content -->
+                    <div class="container">
+                      <img height="50">
+                        <center> <h5 class="">The objective in Minesweeper is to find and mark all the mines hidden under the grey squares, in the shortest time possible. This is done by clicking on the squares to open them. Each square will have one of the following:
+A mine, and if you click on it you'll lose the game.
+A number, which tells you how many of its adjacent squares have mines in them.
+Nothing. In this case you know that none of the adjacent squares have mines, and they will be automatically opened as well.
+It is guaranteed that the first square you open won't contain a mine, so you can start by clicking any square. Often you'll hit on an empty square on the first try and then you'll open up a few adjacent squares as well, which makes it easier to continue. Then it's basically just looking at the numbers shown, and figuring out where the mines are.<h5> <center>
+                       <img height="50">
+                       </div>
+
+
+                       <div class="container">
+
+                           <center> <h5 class="">There are essentially five actions you can take in Minesweeper:
+Open a square. This is done simply by left clicking on a square.
+Marking a square as a mine. This is done by right clicking on a square. A little mine icon will show up there.
+Marking a square with a question mark. This is done by right clicking twice on a square, or right clicking once on a square that's already marked as a mine. Question marks are useful to mark squares you're not absolutely sure are mines, but want to make sure you don't accidentally open them.
+Clear any marks. Again, right click on the square. Right clicking cycles through the following states: Bomb, Question Mark, Clear.
+Opening all remaining adjacent squares to a number square. If for example you have a square with the number 1 and you have already marked one mine in one of the adjacent squares you can left click on the 1 square and the remaining adjacent squares will all be opened. This can save a lot of time while trying to quickly clear out squares. If you press on a number where not all adjacent mines have been marked, e.g. the number is 3 and you've only flagged one adjacent square, then the squares will not be opened, to prevent you from accidentally clicking on a number and blowing yourself up! In the old Windows version of this game you used both mouse buttons together to perform this action, but here we just use a normal left-click.<h5> <center>
+                          <img height="50">
+                          </div>
+
+
+
+
+
+        <!-- Here are where javascript scripts are defined -->
+
+        <!--  Start of script section -->
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="materialize/js/materialize.js"></script>
+        <script src="materialize/js/init.js"></script>
+
+
+
+<!-- Name Script -->
+
+  <script> let name = "How To Play";
+  document.querySelector("#game-title").innerHTML = name;
+  </script>
+        <!-- End of script section  -->
+
+
+  </div>
+
+  <footer class="page-footer">
+
+<!-- Footer Content -->
+
+
+  </footer>
+
+
+</body>
+</html>

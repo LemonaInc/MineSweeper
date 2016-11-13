@@ -17,7 +17,6 @@
 <!--  This sets the title of my bio page to MineSweeper and appears in the tab view when the page is loaded.-->
 
 
-
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -30,17 +29,19 @@
 <!-- This is the navbar located at the top of the page, the navbar icons are used from material-icons which is a font type icon set that allows you to define icons and use them in your code. For instance -->
 
   <nav>
-   <div class="nav-wrapper #00acc1 cyan darken-1
+   <div class="nav-wrapper #00acc1 cyan darken-1">
 
 
-">
      <a href="#!" class="brand-logo"><i class="material-icons"></i></a>
      <ul class="center hide-on-med-and-down">
 
 
 
+       <!--  This button reloads the page -->
        <a href="index.html" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">loop</i></a>
+          <!--  This button goes to the main index.html page -->
         <a href="index.html" class="btn-floating btn-large waves-effect waves-light #536dfe indigo accent-2"><i class="material-icons"><i class="material-icons">play_circle_outline</i></i></a>
+               <!--  This button goes to the how to play page -->
         <a href="Play.html" class="btn-floating btn-large waves-effect waves-light #00b0ff light-blue accent-3"><i class="material-icons">info</i></a>
 
      </ul>
@@ -48,12 +49,10 @@
  </nav>
 </a>
 
-
-
   <!--  This sets the background color, sets the defualt font and font family to San Francisco, sets the color of the text,
-aligns the text to the center of the screen and  smooths the font.  This also sets the background image to the size of 3264px by 2176px and does not repeat the image.-->
+aligns the text to the center of the screen and  smooths the font.  This also sets the background image to the size of 1920px by 1080px and does not repeat the image.-->
 
-<!-- We also define some classes here, for instance we have several types of boxes with different attibutes, sizes  and colors. We define them here so we can use class="" in the code.-->
+<!-- We also define some classes here like largesquare which is the large box in which the smallsquare's reside -->
 
 
 <style>
@@ -94,7 +93,6 @@ background: #677787;
 
 
 
-
  .scoreboard {
  background: #677787;
  margin-right: 0px;
@@ -104,14 +102,6 @@ background: #677787;
 
  }
 
-
- .smallsquare2 {
-   border: 5px solid white;
-   position: relative;
-   text-align: center;
-   width: 50px;
-   height: 50px;
- }
 
 
  .container {
@@ -134,27 +124,24 @@ background: #677787;
      background-color: #FC5457;
  }
 
-
-
 </style>
 </head>
 <body>
 
 
-<!-- Set the game name in center of page here -->
+<!-- This uses javascript script that sets the game name in center of page -->
 
    <center> <h1  id="game-title"> Game Title <h1> <center>
 
 
-<!-- Square Container containg smaller squares  -->
-
+<!-- This is the largesquare container containg smaller squares called smallsquare -->
 
 
  <div class="container">
     <div class="largesquare">
 
 
-
+       <!--  ALl these divs below are smallsquare's which reside inside largesquare -->
 
 <div class="smallsquare" onclick="Materialize.toast('I am a square ', 1000)"> </div>
 <div class="smallsquare" onclick="Materialize.toast('I am a square', 1000)"> </div>
@@ -383,15 +370,10 @@ background: #677787;
 <div class="smallsquare" onclick="Materialize.toast('I am a square', 1000)"> </div>
 
 
-
-<!-- <img width="600" height="600" src="grid.png"> -->
-
-
-
         </div>
       </div>
 
-<!-- Home Anchor -->
+<!-- Here is the home anchor -->
       <a name="home"></a>
       <img height="50">
 
@@ -405,8 +387,7 @@ background: #677787;
         <script src="materialize/js/init.js"></script>
 
 
-
-
+       <!--  This is the Javacript toast class which is used above when someone clicks on a smallsquare in largesquare -->
 
         <script // Materialize.toast(message, displayLength, className, completeCallback);
           Materialize.toast('I am a toast!', 4000) // 4000 is the duration of the toast?></script>
@@ -418,13 +399,11 @@ background: #677787;
 
 
 
-
-<!-- Game Name Script -->
+<!-- This is the game name script that sets the name of the game and is used above-->
 
   <script> let name = "Ultimate MineSweeper";
   document.querySelector("#game-title").innerHTML = name;
   </script>
-
 
 
         <!-- End of script section  -->
@@ -435,8 +414,7 @@ background: #677787;
 
   <footer class="page-footer">
 
-<!-- Footer Content -->
-
+<!-- future footer content goes here-->
 
   </footer>
 
